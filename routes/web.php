@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'InicioController@inicio');
+
+Route::get('posts', 'PostsController@index');
