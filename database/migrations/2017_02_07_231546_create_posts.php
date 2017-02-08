@@ -13,7 +13,12 @@ class CreatePosts extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('posts', function (Blueprint $table) {
+        $table->increments('id');
+        $table->string('title', 40);
+        $table->integer('user_id');
+        $table->timestamps();
+      });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreatePosts extends Migration
      */
     public function down()
     {
-        //
+      Schema::dropIfExists('posts');
     }
 }
