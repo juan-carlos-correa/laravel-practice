@@ -14,3 +14,11 @@
 Route::get('/', 'InicioController@inicio');
 
 Route::get('posts', 'PostsController@index');
+
+Route::get('users', 'InicioController@guardarUsuario');
+
+Route::get('users2', 'InicioController@guardarUsuario2');
+
+Route::get('buscar', 'InicioController@buscarUsuario');
+
+Route::get('modificar-email', 'InicioController@modificarEmail');
